@@ -16,7 +16,7 @@ export type Project = {
   description: string;
   sourceCode: string;
   liveProject: string;
-  preview: string;
+  preview: StaticImageData;
 };
 
 const projects: Project[] = [
