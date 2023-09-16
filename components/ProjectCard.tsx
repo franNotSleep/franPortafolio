@@ -23,7 +23,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           <div className="card">
             <div className="flex flex-col">
               <div className="shrink-0">
-                <Image className="object-contain" src={project.preview} />
+                <Image alt="project preview" className="object-contain" src={project.preview} />
               </div>
               <div className="p-4">
                 <a
