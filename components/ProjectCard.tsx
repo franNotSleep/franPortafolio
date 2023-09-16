@@ -15,7 +15,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
               className="h-10 w-10 object-contain animate-bounce"
               src={toolImg}
               alt="tools"
-              key={toolImg}
+              key={toolImg.src}
             />
           ))}
         </div>
