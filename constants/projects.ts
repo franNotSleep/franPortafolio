@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import { previewChatapp, previewTIL } from "../public/assets";
 import {
   python,
@@ -10,7 +11,7 @@ import {
 } from "../public/assets/tools";
 
 export type Project = {
-  toolsImg: string[];
+  toolsImg: StaticImageData[];
   title: string;
   description: string;
   sourceCode: string;
