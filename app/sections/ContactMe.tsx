@@ -80,7 +80,7 @@ const ContactMe = () => {
   return (
     <section id="contact" className="mt-32">
       <p className="heading text-center mb-16">Contact Me</p>
-      <div className="bg-primary flex max-sm:flex-col-reverse md:divide-x-2 p-4">
+      <div className="flex max-sm:flex-col-reverse md:divide-x-2 p-4">
         <div className="p-2 mr-2">
           <div className="flex gap-2 items-center">
             <Image

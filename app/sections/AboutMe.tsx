@@ -4,20 +4,23 @@ import { paper } from "../../public/assets";
 const KnowsMore = () => {
   return (
     <div>
-      <label htmlFor="my_modal_6" className="button cursor-pointer">
-        Knows more
+      <label htmlFor="my_modal_6">
+        <button className="button ">Knows more</button>
       </label>
 
       {/* Put this part before </body> tag */}
       <input type="checkbox" id="my_modal_6" className="modal-toggle" />
       <div className="modal">
         <div className="modal-box bg-black">
-          <h3 className="text-primary font-bold font-palanquin text-lg">Wow, did you really wants to know more? that's funny</h3>
+          <h3 className="text-primary font-bold font-palanquin text-lg">
+            Wow, did you really wants to know more? that's funny
+          </h3>
           <p className="py-4 font-palanquin">
-            I do actually sleep, the name of the logo and the page (frannotsleep) is actually beacuse my
-            family thinks that i don't sleep, so every time they see me, they
-            are always like: 'fran not sleep', even when i just woke up from an
-            eight hours of pure dreaming😅.
+            I do actually sleep, the name of the logo and the page
+            (frannotsleep) is actually beacuse my family thinks that i don't
+            sleep, so every time they see me, they are always like: 'fran not
+            sleep', even when i just woke up from an eight hours of pure
+            dreaming😅.
           </p>
           <div className="modal-action">
             <label htmlFor="my_modal_6" className="button">

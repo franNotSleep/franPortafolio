@@ -12,9 +12,6 @@
   scroll-behavior: smooth;
 }
 
-body {
-  background: #000505;
-}
 
 @layer components {
   .heading {
@@ -27,12 +24,12 @@ body {
     @apply text-white text-sm font-palanquin;
   }
   .button {
-    @apply rounded-full text-white bg-secondary font-poppins text-sm text-center p-2 max-sm:p-3 max-sm:w-max max-sm:mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-sky-500 duration-300;
+    @apply rounded-full text-white bg-secondary font-poppins text-sm text-center p-2 max-sm:p-3 max-sm:w-max max-sm:mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-primary duration-300;
   }
   .card {
-    @apply mx-auto max-w-sm rounded-xl shadow-lg overflow-hidden  mt-4 bg-primary
+    @apply mx-auto max-w-sm rounded-xl shadow-lg overflow-hidden  mt-4 bg-secondary
   }
   .link {
-    @apply body hover:text-secondary hover:decoration-primary font-poppins underline decoration-secondary  text-white transition duration-300 ease-in-out decoration-2;
+    @apply body hover:text-primary hover:decoration-primary font-poppins underline decoration-secondary  text-white transition duration-300 ease-in-out decoration-2;
   }
 }

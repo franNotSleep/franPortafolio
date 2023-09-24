@@ -4,10 +4,10 @@ import Image from "next/image";
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <div className="max-w-lg max-sm:max-w-sm max-sm:px-4 mx-auto flex-col flex justify-start">
+    <div className="hover:-translate-y-1 hover:scale-110  transition ease-in-out duration-100 max-w-lg max-sm:max-w-sm max-sm:px-4 mx-auto flex-col flex justify-start">
       <div className="flex flex-row-reverse items-center mx-auto">
         <div
-          className="ml-2 rounded-lg bg-primary mx-auto flex flex-col gap-6 justify-between 
+          className="ml-2 rounded-lg bg-secondary mx-auto flex flex-col gap-6 justify-between 
     "
         >
           {project.toolsImg.map((toolImg) => (
@@ -38,7 +38,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </div>
         </div>
       </div>
-      <div className="self-start flex px-4 mt-2 group rounded-lg bg-primary ">
+      <div className="self-start flex px-4 mt-2 group rounded-lg bg-secondary ">
         <div className="flex items-center">
           <Image className="h-12 w-12" src={github} alt="github" />
           <a target="_blank" className="link" href={project.sourceCode}>

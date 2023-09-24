@@ -14,14 +14,13 @@ const config: Config = {
         poppins: ["Poppins", "sans-serif"],
         palanquin: ["Palanquin", "sans-serif"],
       },
-      colors: {
-        primary: "#AE6416",
-        secondary: "#1BB4B7",
-      },
     },
     container: {
       center: true,
     },
+  },
+  daisyui: {
+    themes: ["retro"],
   },
   plugins: [tailwindforms, daisyui],
 };
