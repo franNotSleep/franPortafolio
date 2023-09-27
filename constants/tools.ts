@@ -1,3 +1,4 @@
+import { nextjs } from "@/public/assets/tools/";
 import {
   typescript,
   nodejs,
@@ -14,6 +15,7 @@ const tools = [
   { src: bootstrap, alt: "bootstrap" },
   { src: tailwindcss, alt: "tailwindcss" },
   { src: react, alt: "react" },
+  { src: nextjs, alt: "nextjs" },
 ];
 
 export default tools;

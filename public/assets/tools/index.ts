@@ -9,6 +9,7 @@ import postgre from "./postgre.png";
 import mongodb from "./mongodb.png";
 import github from "./github-2.png";
 import earth from "./Earth.png";
+import nextjs from './nextjs.svg'
 
 export {
   python,
@@ -21,5 +22,6 @@ export {
   postgre,
   mongodb,
   earth,
-  github
+  github,
+  nextjs
 };

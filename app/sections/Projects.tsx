@@ -1,5 +1,7 @@
+import { totagpreview } from "@/public/assets";
 import ProjectCard from "../../components/ProjectCard";
 import projects from "../../constants/projects";
+import Image from "next/image";
 
 const Projects = () => {
   return (
