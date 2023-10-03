@@ -12,24 +12,53 @@
   scroll-behavior: smooth;
 }
 
-
 @layer components {
-  .heading {
-    @apply text-4xl max-sm:text-xl text-white font-bold font-palanquin underline decoration-secondary decoration-4;
-  }
-  .text-underline {
-    @apply decoration-2 underline decoration-secondary;
-  }
-  .body {
-    @apply text-white text-sm font-palanquin;
-  }
-  .button {
-    @apply rounded-full text-white bg-secondary font-poppins text-sm text-center p-2 max-sm:p-3 max-sm:w-max max-sm:mx-auto transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-primary duration-300;
-  }
   .card {
-    @apply mx-auto max-w-sm rounded-xl shadow-lg overflow-hidden  mt-4 bg-secondary
+    @apply mx-auto max-w-sm rounded-xl shadow-lg overflow-hidden  mt-4 bg-secondary;
   }
-  .link {
-    @apply body hover:text-primary hover:decoration-primary font-poppins underline decoration-secondary  text-white transition duration-300 ease-in-out decoration-2;
+  .text-body {
+    @apply text-white font-palanquin w-96 max-md:w-64 max-sm:text-center max-sm:p-2;
   }
+
+  .link-nav {
+    @apply link-underline hover:underline hover:decoration-primary font-palanquin;
+  }
+  .slides-container {
+    @apply h-screen snap-y-mandatory;
+  }
+  .slides {
+    @apply h-screen flex items-center justify-center snap-start px-14;
+  }
+  .text-heading {
+    @apply text-left font-palanquin text-8xl max-md:text-5xl max-sm:text-2xl max-sm:text-center font-bold;
+  }
+  .social-link {
+    @apply tooltip shadow-lg transition duration-150 ease-in-out hover:-translate-y-1;
+  }
+  .text-badge {
+    @aply badge bg-base-100 text-white font-poppins my-2;
+  }
+  .custom-input {
+    @apply rounded-lg input bg-white w-full max-w-md;
+  }
+  .custom-placeholder {
+    @apply placeholder:font-poppins placeholder:text-sm placeholder:text-slate-400;
+  }
+  .custom-form-control {
+    @apply form-control w-full max-w-md flex flex-col;
+  }
+}
+
+.snap-y-mandatory {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.link-underline {
+  text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+  transition: text-decoration-color 300ms;
+}
+
+.link-underline:hover {
+  text-decoration-color: rgba(0, 0, 0, 1);
 }

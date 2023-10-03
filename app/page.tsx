@@ -1,29 +1,25 @@
-import Divider from "@/components/Divider"
-import Nav from "@/components/Nav"
-import AboutMe from "./sections/AboutMe"
-import ContactMe from "./sections/ContactMe"
-import Projects from "./sections/Projects"
-import Hero from "./sections/Hero"
+import Nav from "@/components/Nav";
+import AboutMe from "./sections/AboutMe";
+import ContactMe from "./sections/ContactMe";
+import Hero from "./sections/Hero";
+import Projects from "./sections/Projects";
 
 export default function Home() {
   return (
-    <main>
+    <main className="slides-container">
       <Nav />
-      <section>
+      <section className="slides">
         <Hero />
       </section>
-      <Divider />
-      <section>
+      <section id="about" className="slides bg-primary">
         <AboutMe />
       </section>
-      <Divider />
-      <section>
+      <section id="projects" className="slides">
         <Projects />
       </section>
-      <Divider />
-      <section>
+      <section id="contact" className="slides bg-primary">
         <ContactMe />
       </section>
     </main>
-  )
+  );
 }

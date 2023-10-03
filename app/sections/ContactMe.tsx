@@ -1,187 +1,75 @@
-"use client"
+import ContactForm from "@/components/ContactForm";
 
-import { useEffect, useState } from "react";
-import { github2, linkedin, phone } from "../../public/assets";
-import { send } from "@emailjs/browser";
-import Image from "next/image"
-
-const defaultValues = {
-  email: "",
-  message: "",
-  name: "",
-};
 const ContactMe = () => {
-  const [values, setValues] = useState(defaultValues);
-  const [showSuccessToast, setShowSuccessToast] = useState(false);
-  const [showFailToast, setShowFailToast] = useState(false);
-  const [sending, setSending] = useState(false);
-
-  // Hide show toast after 3seconds
-  useEffect(() => {
-    if (showSuccessToast === true) {
-      setTimeout(() => {
-        setShowSuccessToast(false);
-      }, 3000);
-    }
-
-    if (showFailToast === true) {
-      setTimeout(() => {
-        setShowFailToast(false);
-      }, 3000);
-    }
-  });
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    const { name, value } = e.target;
-
-    setValues({
-      ...values,
-      [name]: value,
-    });
-  };
-
-  const handleSend = () => {
-    setSending(true);
-    const templateParams = {
-      to_name: "francisco",
-      from_name: values.name,
-      message: values.message,
-      from_email: values.email,
-    };
-
-    if (!validateEmail()) {
-      console.log("Invalid email");
-      return;
-    }
-
-    send(
-      "service_qxoh7ac",
-      "template_8wx8nog",
-      templateParams,
-      "sBGoQ_4ebcMkj6UBk",
-    )
-      .then(() => {
-        setShowSuccessToast(true);
-        setSending(false);
-        setValues(defaultValues);
-      })
-      .catch(() => {
-        setShowFailToast(true);
-        setSending(false);
-      });
-  };
-
-  const validateEmail = (): boolean => {
-    return /^\w+([\\.-]?\w+)*@\w+([\\.-]?\w+)*(\.\w{2,3})+$/.test(values.email);
-  };
-
   return (
-    <section id="contact" className="mt-32">
-      <p className="heading text-center mb-16">Contact Me</p>
-      <div className="flex max-sm:flex-col-reverse md:divide-x-2 p-4">
-        <div className="p-2 mr-2">
-          <div className="flex gap-2 items-center">
-            <Image
-              className="max-sm:h-20 max-sm:w-20 h-36 w-36"
-              src={github2}
-              alt="github"
-            />
-            <a className="link" href="https://github.com/frannotsleep">
-              https://github.com/frannotsleep
-            </a>
-          </div>
-          <div className="flex gap-2 items-center">
-            <Image
-              className="max-sm:h-20 max-sm:w-20 h-36 w-36"
-              src={linkedin}
-              alt="linkedin"
-            />
-            <a className="link" href="https://www.linkedin.com/in/frannotsleep">
-              https://www.linkedin.com/in/frannotsleep
-            </a>
-          </div>
-          <div className="flex gap-2 items-center">
-            <Image
-              className="max-sm:h-20 max-sm:w-20 h-36 w-36"
-              src={phone}
-              alt="github"
-            />
-            <a className="link" href="#">
-              +1 (829)-669-4314
-            </a>
-          </div>
-        </div>
-
-        <div className="p-4 flex grow flex-col gap-2 justify-between">
-          <div className="flex flex-col max-w-3xl gap-2">
-            <label className="text-white font-palanquin text-md font-bold">
-              Your Name
-            </label>
-            <input
-              name="name"
-              value={values.name}
-              onChange={handleInputChange}
-              className="rounded-lg placeholder:text-gray-400  transition ease-in-out duration-200 hover:bg-sky-100"
-              placeholder="Susanito de la lola"
-            />
-          </div>
-          <div className="flex flex-col max-w-3xl gap-2">
-            <label className="text-white font-palanquin text-md font-bold">
-              Your Email
-            </label>
-            <input
-              name="email"
-              type="email"
-              value={values.email}
-              onChange={handleInputChange}
-              className="rounded-lg  placeholder:text-gray-400 w-full  transition ease-in-out duration-200 hover:bg-sky-100"
-              placeholder="Susanito@domain.com"
-            />
-          </div>
-          <div className="flex flex-col max-w-3xl gap-2">
-            <label className="text-white font-palanquin text-md font-bold">
-              Your Message
-            </label>
-            <textarea
-              name="message"
-              value={values.message}
-              onChange={handleInputChange}
-              className="rounded-lg h-36 placeholder:text-gray-400"
-              placeholder="Susanito says that he likes your portafolio."
-            />
-          </div>
-          <button
-            disabled={sending}
-            onClick={handleSend}
-            className={`button w-28 rounded-md ${
-              sending && "flex items-center gap-4"
-            }`}
-          >
-            {sending && (
-              <span className="loading loading-spinner  text-primary"></span>
-            )}
-            Send
-          </button>
+    <div className="flex max-md:flex-col justify-between w-full items-center">
+      <div className="flex flex-col max-md:justify-center max-md:items-center gap-y-4 items-start">
+        <p className="text-left text-heading max-lg:text-6xl max-sm:text-5xl text-white">
+          Contact <span className="text-base-100">Me</span>
+        </p>
+        <p className="badge bg-base-100 font-poppins">Let's connect</p>
+        <p className="text-body max-md:hidden max-md:p-4">
+          Thank you for taking the time to explore my portfolio. If you have any
+          questions, want to discuss potential collaborations, or simply want to
+          say hello, I'd love to hear from you.
+        </p>
+        <div className="block max-md:hidden">
+          <FindMe />
         </div>
       </div>
-      {showSuccessToast && (
-        <div className="toast toast-top toast-start">
-          <div className="alert alert-success">
-            <span>Message sent successfully.</span>
-          </div>
-        </div>
-      )}
-      {showFailToast && (
-        <div className="toast toast-top toast-start">
-          <div className="alert alert-error">
-            <span>Something went wrong.</span>
-          </div>
-        </div>
-      )}
-    </section>
+      <div className="hidden xl:block w-40 h-40 2xl:w-72  2xl:h-72">
+      <img src="/saly-14.png" alt="illustration with a phone"/>
+      </div>
+      <div className="min-lg:w-10/12 w-5/12 max-md:w-full max-md:mt-8">
+        <ContactForm />
+      </div>
+      <div className="hidden max-md:block">
+        <FindMe />
+      </div>
+    </div>
   );
 };
+
+function FindMe() {
+  return (
+    <div className="mt-8">
+      <p className="shadow-lg font-poppins text-white">Find me here!</p>
+      <div className="flex gap-4">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/frannotsleep"
+          className="social-link"
+        >
+          <img
+            src="/assets/Linkedin.png"
+            alt="linkedin icon"
+            width={40}
+            height={40}
+          />
+        </a>
+        <a
+          target="_blank"
+          href="https://github.com/franNotSleep"
+          className="social-link"
+        >
+          <img
+            src="/assets/github-2.png"
+            alt="github icon"
+            width={40}
+            height={40}
+          />
+        </a>
+        <a href="#" data-tip="+1 829-669-4314" className="social-link">
+          <img
+            src="/assets/phone.png"
+            alt="phone icon"
+            width={40}
+            height={40}
+          />
+        </a>
+      </div>
+    </div>
+  );
+}
 
 export default ContactMe;

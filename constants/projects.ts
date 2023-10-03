@@ -39,7 +39,7 @@ const projects: Project[] = [
     title: "Portafolio",
     description:
       "This is just my portafolio, where i show some of my recent projects, showing how i use the current technologies.  ",
-    sourceCode: "#",
+    sourceCode: "https://frannotsleep.vercel.app/",
     liveProject: "https://frannotsleep.vercel.app/",
     toolsImg: [typescript, nextjs, react],
     preview: portafoliopreview,
