@@ -54,9 +54,13 @@ function ProjectCard({ project }: { project: Project }) {
               height={40}
               alt="earth logo"
             />
-            <a target="-_blank" href={project.liveProject}>
-              Live Project
-            </a>
+            {project.liveProject !== "" ? (
+              <a target="_blank" href={project.liveProject}>
+                Live Project
+              </a>
+            ) : (
+              <p className="cursor-not-allowed text-gray-400">Live Project</p>
+            )}
           </div>
           <div className="flex justify-center items-center link-nav">
             <Image
@@ -65,7 +69,7 @@ function ProjectCard({ project }: { project: Project }) {
               height={40}
               alt="github logo"
             />
-            <a target="-_blank" href={project.sourceCode}>
+            <a target="_blank" href={project.sourceCode}>
               Source Code
             </a>
           </div>

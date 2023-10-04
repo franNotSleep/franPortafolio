@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 import {
   portafoliopreview,
   previewChatapp,
+  previewTIL,
   totagpreview,
 } from "../public/assets";
 import {
@@ -34,7 +35,24 @@ const projects: Project[] = [
     toolsImg: [typescript, react, nextjs],
     preview: totagpreview,
   },
-
+  {
+    title: "TIL",
+    description:
+      "TIL (today i learned) is a simple post App that allows user to share what they have learn, obviously 😅. Users can post, comments on another post, edit their post, visit and search others users profiles.",
+    sourceCode: "https://github.com/franNotSleep/TIL",
+    liveProject: "",
+    toolsImg: [typescript, postgre, react, python, docker],
+    preview: previewTIL,
+  },
+  {
+    title: "ChatApp",
+    description:
+      "A Chat application That allows you to talk with friends in real-time. This project provide with typing status and onlint/offline feedback.",
+    sourceCode: "https://github.com/franNotSleep/chatapp",
+    liveProject: "",
+    toolsImg: [typescript, mongodb, react, nodejs],
+    preview: previewChatapp,
+  },
   {
     title: "Portafolio",
     description:
