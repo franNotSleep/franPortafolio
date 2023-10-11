@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 
 const ContactMe = () => {
@@ -60,7 +61,7 @@ function FindMe() {
           />
         </a>
         <a href="#" data-tip="+1 829-669-4314" className="social-link">
-          <img
+          <Image
             src="/assets/phone.png"
             alt="phone icon"
             width={40}

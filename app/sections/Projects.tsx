@@ -1,10 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Projects = () => {
   return (
     <div className="flex justify-center ">
-      <div className="max-sm:hidden h-96 w-96">
-        <img src="/saly-11.png" alt="middle age with a laptop" />
+      <div className="max-sm:hidden h-96 w-96 relative">
+        <Image fill src="/saly-11.png" alt="middle age with a laptop" />
       </div>
       <div className="flex flex-col max-sm:justify-center max-sm:items-center gap-y-4">
         <p className="text-heading text-white text-left">Projects</p>
@@ -17,7 +18,7 @@ const Projects = () => {
           goal I've achieved, and a step forward in my professional journey.
         </p>
         <Link href={"/projects"}>
-          <button className="btn btn-wide btn-square btn-primary font-poppins text-white">
+          <button className="rounded-lg self-start max-md:mx-auto font-poppins btn btn-wide bg-primary mt-4 hover:bg-primary-focus">
             Explore
           </button>
         </Link>

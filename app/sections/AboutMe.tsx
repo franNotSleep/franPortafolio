@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const AboutMe = () => {
   return (
     <div className="text-left text-white flex items-center">
@@ -13,8 +15,8 @@ const AboutMe = () => {
           full-stack web developer.
         </p>
       </div>
-      <div className="h-96 w-96 max-md:h-52 max-md:w-52 max-sm:hidden">
-        <img src="/saly-34.png" alt="saly illustration" />
+      <div className="h-96 w-96 max-md:h-52 max-md:w-52 max-sm:hidden relative">
+        <Image src="/saly-34.png" alt="saly illustration" fill/>
       </div>
     </div>
   );
