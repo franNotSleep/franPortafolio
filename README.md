@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hello there! 👋
 
-## Getting Started
+I'm Francisco Jose, a passionate web developer with a love for turning ideas into interactive and user-friendly websites. I thrive on the challenge.
 
-First, run the development server:
+## About Me
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+I have a keen interest in crafting seamless user experiences and solving complex problems through innovative web development solutions. With a diverse tech stack and a drive for continuous learning, I'm always eager to explore new technologies and expand my skill set.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend:** React, TypeScript, Next.js
+- **Backend:** Node.js, Express.js, Nest.js, Python, Django
+- **Databases:** MongoDB, PostgreSQL, MySQL
+- **DevOps:** Docker, Git
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Projects
 
-## Learn More
+Here are a few projects I've worked on:
 
-To learn more about Next.js, take a look at the following resources:
+- [Project 1](link-to-project-1): Brief description.
+- [Project 2](link-to-project-2): Brief description.
+- [Project 3](link-to-project-3): Brief description.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Feel free to explore my GitHub repositories for more projects!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Get in Touch
 
-## Deploy on Vercel
+- LinkedIn: [Your LinkedIn Profile](link-to-linkedin)
+- Email: [your.email@example.com](mailto:your.email@example.com)
+- Personal Website: [yourwebsite.com](https://yourwebsite.com)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Let's connect and build something awesome together!
